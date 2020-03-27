@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Overpass, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 20px;
+    width: 80%;
+}
+ 
+th:first-child {
+    text-align: left;
+}
+
+th {
+    border-top: 0 !important;
+}
+
+th, td {
+    border-top: 1px solid #1C1C1C;
+    padding: 4vh 15px;
+}
