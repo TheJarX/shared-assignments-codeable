@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    font-family: 'Overpass', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+}
+
+.features {
+    display: flex;
+    flex-flow: row;
+}
+
+.feature {
+    font-weight: bold;
+    margin: 10vh;
+}
+
+.title{
+    font-size: 22px;
+    margin: 5vh 0;
+}
+.feature h3 {
+    color: #0AD9C6;
+    font-size: 28px;
+    line-height: 34px;
+}
+
+.feature p {
+    font-weight: normal;
+    font-size: 16px;
+    color: #7A7A7A;
+    line-height: 28px;
+}

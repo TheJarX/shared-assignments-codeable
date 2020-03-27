@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    background: #544e4e;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.content {
+    display: flex;
+    flex-flow: column;
+}
+
+.content img {
+    display: flex;
+    align-self: center;
+    margin: 2vh;
+}
+
+.subtitle {
+    font-family: Roboto, sans-serif;
+    color: #A0A2A6;
+    font-size: 30px;
+    font-weight: bold;
+}
