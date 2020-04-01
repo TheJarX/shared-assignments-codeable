@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 300ms;
+    font-family: 'Overpass', sans-serif;
+  }
+
+#page {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 5%;
+    text-align: center;
+    grid-template-areas: 
+    "header header header header"
+    "features features features features"
+    "main main main main";
+}
+
+p {
+    font-size: 16px;
+    line-height: 175%;
+    color: #7A7A7A;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    /* or 100% */
+
+    letter-spacing: -1.5px;
+}
+
+.info-text {
+    font-size: 17px;
+    line-height: 182%;
+}
+
+.header {
+    padding: 5% 15%;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.characteristic {
+    margin-top: 5%;
+}
+
+  .main {
+      grid-area: main;
+  }
+
+.cover-img {
+    overflow: hidden;
+    height: 100%;
+    border-radius: 6px;
+}
+
+.cover-img img{
+    width: 100%;
+}
+
+.features * { 
+    margin-top: 2%;
+}
+
+.features {
+    grid-area: features;
+    margin-top: 5%;
+}
+
+.feature p, h5 {
+    text-align: start;
+}
+
+.feature h5 {
+    font-weight: bold;
+    font-size: 20px ;
+    line-height: 160%;
+}
+
+.feature-title{
+    display: flex;
+}
+
+.feature-title img{
+    margin-right: 5%;
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 426px) and (max-width: 960px) {
+  
+    #page {
+        padding: 2%;
+        grid-template-areas: 
+        "header header header header"
+        "header header header header"
+        "main main main main"
+        "features features features features";
+        text-align: start;
+    }
+
+    .header {
+        padding: 0;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas: 
+            "info char char"
+            ". char char"
+        ;
+    }
+
+    .info {
+        grid-area: info;
+    }
+
+    .characteristics {
+        margin: 0 5% 5% 5%;
+        grid-area: char;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr; 
+    }
+
+    .characteristic h4, p { 
+        margin: 4% 0;
+    }
+
+    .characteristic {
+        margin-top: 0;
+        margin-bottom: 5%;
+        display: flex;
+        flex-flow: column;
+    }
+
+    .char-icon {
+        width: 20%;
+    }   
+
+    .cover-img {
+        height: 450px;
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.3fr 1fr;
+        grid-template-areas: 
+        "title title"
+        "feature feature"
+        ;
+    }
+
+    .features h2 {
+        grid-area: title;
+    }
+
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+
+    #page {
+        padding: 2%;
+        grid-template-areas: 
+        "header header header header"
+        "header header header header"
+        "main main features features ";
+        text-align: start;
+    }
+
+    .header {
+        padding: 0;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas: 
+            "info char char"
+            ". char char"
+        ;
+    }
+
+    .info {
+        grid-area: info;
+    }
+
+    .characteristics {
+        margin: 0 5% 5% 5%;
+        grid-area: char;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr; 
+    }
+
+    .characteristic h4, p { 
+        margin: 4% 0;
+    }
+
+    .characteristic {
+        margin-top: 0;
+        margin-bottom: 5%;
+        display: flex;
+        flex-flow: column;
+    }
+
+    .char-icon {
+        width: 20%;
+    }   
+
+    .cover-img {
+        height: 450px;
+    }
+
+    .features {
+        display: flex;
+        margin: 10%;
+        flex-flow: column;
+    }
+
+    .feature-title{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    .feature-title img{
+        margin-right: 5%;
+    }
+    
+
+}
+
