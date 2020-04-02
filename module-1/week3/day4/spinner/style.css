@@ -1,0 +1,19 @@
+.spinner-container {
+    display: flex;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    animation: loader 1.5s linear 1s infinite normal;
+}
+
+@keyframes loader {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
