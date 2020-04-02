@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background:#dfdfdf;
+}
+
+i {
+  font-size: 2em;
+  /* margin: 10px; */
+}
+
+footer {
+  position: absolute;
+  margin-top: 270px;
+  background: #fff;
+  width: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1vh 0vh;
+  border-radius: 6px;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, .15);
+  z-index: 10;
+}
+
+i:hover {
+  background: linear-gradient(45deg, #F09433 0%,#E6683C 25%,#DC2743 50%,#CC2366 75%,#BC1888 100%); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hidden {
+  display: none;
+}
+.wrapper {
+  /* background: red; */
+  width: 200px;
+  height: 120px;
+  position: absolute;
+  top: 180px;
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: center;
+  clip: rect(0px, 200px,112px, 0px);
+}
+
+.semi-circulo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100px; 
+  height: 50px; 
+  background: #fff;
+  -moz-border-radius: 100px 100px 0 0;
+  -webkit-border-radius: 100px 100px 0 0;
+  border-radius: 100px 100px 0 0;
+  position: absolute;
+  transform-origin: 50% 100%;
+  transform: rotate(-180deg);
+  top: 20px;
+  z-index: 1;
+  animation: open 1s infinite;
+
+}
+
+.shadow {
+  transform: rotate(-180deg);
+  z-index: 0 !important;
+  animation: openshadow 1s infinite;
+
+  background: linear-gradient(45deg, #F09433 0%,#E6683C 25%,#DC2743 50%,#CC2366 75%,#BC1888 100%);  
+}
+.semi-circulo:hover .shadow{
+  animation: open 1s ease;
+}
+.semi-circulo:hover .shadow{
+  animation: openshadow 700ms linear infinite;
+  animation-direction: normal;
+
+}
+
+.fa-instagram {
+  font-size: 1.5em;
+}
+
+.ig2 {
+  align-self: baseline;
+  top: 15px;
+}
+
+.fa-plus-circle {
+}
+
+.fa-plus-circle:hover {
+}
+
+
+@keyframes openshadow {
+  to {
+    transform: rotate(135deg);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.05);
+
+  }
+}
+@keyframes open {
+  from {
+  transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(1deg);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.05);
+
+  }
+}
+
+@keyframes plus-animation {
+  from {
+
+  }
+  to {
+
+  }
+}
